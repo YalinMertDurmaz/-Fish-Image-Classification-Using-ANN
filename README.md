@@ -1,51 +1,36 @@
-# Fish Image Classification Using Artificial Neural Network (ANN)
+# Fish Image Classification Using ANN
 
-## Overview
+This project implements an Artificial Neural Network (ANN) model to classify various fish species using images from the Large-Scale Fish Dataset. The primary objective is to achieve high accuracy in classifying these images, ultimately aiding in the study and conservation of aquatic biodiversity.
 
-This project focuses on classifying different species of fish using an Artificial Neural Network (ANN) model. The dataset used for this project is the [Large-Scale Fish Dataset](https://www.kaggle.com/datasets/crowww/a-large-scale-fish-dataset). The goal of this project is to develop a model that accurately identifies various types of fish based on their images and to provide detailed performance metrics through a classification report and visualizations.
+## Development Environment
 
-## Table of Contents
+- **Platform:** Kaggle
+- **Programming Language:** Python
+- **Libraries Used:** TensorFlow, Pandas, Matplotlib, Seaborn, Scikit-Learn
 
-* [Overview](#overview)
-* [Dataset](#dataset)
-* [Model Architecture](#model-architecture)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Training and Validation](#training-and-validation)
-* [Evaluation](#evaluation)
-* [Results](#results)
-* [Conclusion](#conclusion)
+### Notes:
+- It is recommended to develop the project directly on Kaggle due to the large dataset size (approximately 3GB).
+- While other platforms like Google Colab can be used, the final notebook must be hosted on Kaggle.
 
-## Dataset
+## Project Overview
 
-The dataset contains images of various fish species, including:
+The notebook is structured with the following sections:
 
-* Black Sea Sprat
-* Gilt-Head Bream
-* Hourse Mackerel
-* Red Mullet
-* Shrimp
-* Striped Red Mullet
-* Trout
+1. **Importing Necessary Libraries:** Load essential libraries for data handling, model creation, and visualization.
+2. **Data Preparation:** Extract image paths and labels from the dataset, ensuring to exclude ground truth images.
+3. **Visualizing Sample Images and Class Distribution:** Display sample images and the distribution of classes to assess class balance.
+4. **Data Splitting and Augmentation:** Split the dataset into training and testing sets, applying image augmentation techniques.
+5. **Building the ANN Model:** Construct an ANN model with multiple dense layers, including dropout and batch normalization.
+6. **Model Compilation and Training:** Compile the model using the Adagrad optimizer and train it while implementing early stopping and learning rate scheduling.
+7. **Training and Validation Results Visualization:** Visualize training and validation loss and accuracy over epochs.
+8. **Model Evaluation on Test Set:** Evaluate model performance on the test set and display confusion matrix and classification report.
 
-The images are divided into training, validation, and test sets to ensure the model can generalize well to new data.
+## Results
 
-## Model Architecture
+- **F1 Score:** 0.9666
+- **Accuracy:** 0.9671
+- **Loss:** 1.4024
+- **Precision:** 0.9672
+- **Recall:** 0.9663
 
-The model used in this project is a fully connected ANN. The architecture includes:
-
-* Flatten Layer for input images
-* Multiple Dense Layers with ReLU activation
-* Dropout layers for regularization
-* Batch normalization to stabilize the training process
-* Softmax output layer to classify the fish species
-
-## Installation
-
-To run this project locally, clone the repository and ensure the following libraries are installed:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Fish-Image-Classification-ANN.git
-cd Fish-Image-Classification-ANN
-pip install tensorflow pandas matplotlib seaborn scikit-learn
-
+### Classification Report:
