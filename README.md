@@ -47,8 +47,5 @@ This project implements an Artificial Neural Network (ANN) model to classify dif
 - Striped Red Mullet: Precision: 0.99, Recall: 1.00, F1-score: 0.99
 - Trout: Precision: 0.95, Recall: 0.94, F1-score: 0.95
 
-## License
-- No license information available.
-
 ## Link to Kaggle Notebook
 - [Kaggle Notebook](https://www.kaggle.com/code/yalnmertdurmaz/fish-image-classification-using-artificial-neural?scriptVersionId=202722162)
