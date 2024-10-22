@@ -13,10 +13,6 @@ This project implements an Artificial Neural Network (ANN) model to classify var
   - Seaborn
   - Scikit-Learn
 
-### Notes
-- It is recommended to develop the project directly on Kaggle due to the large dataset size (approximately 3GB).
-- While other platforms like Google Colab can be used, the final notebook must be hosted on Kaggle.
-
 ## Project Overview
 
 The notebook is structured with the following sections:
