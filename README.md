@@ -54,3 +54,4 @@ The notebook is structured with the following sections:
 ## Kaggle Notebook Link
 
 You can access the notebook [here](https://www.kaggle.com/code/yalnmertdurmaz/fish-image-classification-using-artificial-neural?scriptVersionId=202722162).
+
