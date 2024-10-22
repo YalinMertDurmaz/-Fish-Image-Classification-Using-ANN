@@ -6,9 +6,14 @@ This project implements an Artificial Neural Network (ANN) model to classify var
 
 - **Platform:** Kaggle
 - **Programming Language:** Python
-- **Libraries Used:** TensorFlow, Pandas, Matplotlib, Seaborn, Scikit-Learn
+- **Libraries Used:**
+  - TensorFlow
+  - Pandas
+  - Matplotlib
+  - Seaborn
+  - Scikit-Learn
 
-### Notes:
+### Notes
 - It is recommended to develop the project directly on Kaggle due to the large dataset size (approximately 3GB).
 - While other platforms like Google Colab can be used, the final notebook must be hosted on Kaggle.
 
@@ -34,3 +39,22 @@ The notebook is structured with the following sections:
 - **Recall:** 0.9663
 
 ### Classification Report:
+
+| Species               | Precision | Recall | F1-Score | Support |
+|-----------------------|-----------|--------|----------|---------|
+| Black Sea Sprat       | 0.96      | 1.00   | 0.98     | 211     |
+| Gilt-Head Bream       | 0.98      | 0.97   | 0.97     | 204     |
+| Hourse Mackerel       | 0.98      | 1.00   | 0.99     | 195     |
+| Red Mullet            | 0.99      | 0.99   | 0.99     | 191     |
+| Red Sea Bream         | 0.99      | 0.98   | 0.98     | 201     |
+| Sea Bass              | 0.98      | 0.95   | 0.96     | 179     |
+| Shrimp                | 0.99      | 0.98   | 0.98     | 209     |
+| Striped Red Mullet    | 0.99      | 1.00   | 0.99     | 207     |
+| Trout                 | 0.95      | 0.94   | 0.95     | 203     |
+| **Accuracy**          |           |        | **0.98** | 1800    |
+| **Macro Avg**         | 0.98      | 0.98   | 0.98     | 1800    |
+| **Weighted Avg**      | 0.98      | 0.98   | 0.98     | 1800    |
+
+## Kaggle Notebook Link
+
+You can access the notebook [here](https://www.kaggle.com/code/yalnmertdurmaz/fish-image-classification-using-artificial-neural?scriptVersionId=202722162).
