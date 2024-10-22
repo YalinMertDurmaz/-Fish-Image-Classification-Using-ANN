@@ -1,57 +1,54 @@
 # Fish Image Classification Using ANN
 
-This project implements an Artificial Neural Network (ANN) model to classify various fish species using images from the Large-Scale Fish Dataset. The primary objective is to achieve high accuracy in classifying these images, ultimately aiding in the study and conservation of aquatic biodiversity.
+This project implements an Artificial Neural Network (ANN) model to classify different species of fish using images from the Large-Scale Fish Dataset. The goal is to achieve high accuracy in classifying images of various fish species.
 
-## Development Environment
+## Dataset
+- **Source**: [Large-Scale Fish Dataset](https://www.kaggle.com/datasets/crowww/a-large-scale-fish-dataset/data)
+- **Total Rows**: 9000 images
+- **Classes**: 9 species of fish
 
-- **Platform:** Kaggle
-- **Programming Language:** Python
-- **Libraries Used:**
-  - TensorFlow
-  - Pandas
-  - Matplotlib
-  - Seaborn
-  - Scikit-Learn
+## Model Structure
+- Input Layer: Flatten
+- Hidden Layers:
+  - Dense (1024 units, ReLU, L2 regularization)
+  - Batch Normalization
+  - Dropout (0.2)
+  - Dense (512 units, ReLU, L2 regularization)
+  - Batch Normalization
+  - Dense (256 units, ReLU, L2 regularization)
+  - Dropout (0.2)
+  - Dense (128 units, ReLU, L2 regularization)
+  - Dense (64 units, ReLU, L2 regularization)
+  - Dropout (0.2)
+- Output Layer: Dense (9 units, Softmax)
 
-## Project Overview
-
-The notebook is structured with the following sections:
-
-1. **Importing Necessary Libraries:** Load essential libraries for data handling, model creation, and visualization.
-2. **Data Preparation:** Extract image paths and labels from the dataset, ensuring to exclude ground truth images.
-3. **Visualizing Sample Images and Class Distribution:** Display sample images and the distribution of classes to assess class balance.
-4. **Data Splitting and Augmentation:** Split the dataset into training and testing sets, applying image augmentation techniques.
-5. **Building the ANN Model:** Construct an ANN model with multiple dense layers, including dropout and batch normalization.
-6. **Model Compilation and Training:** Compile the model using the Adagrad optimizer and train it while implementing early stopping and learning rate scheduling.
-7. **Training and Validation Results Visualization:** Visualize training and validation loss and accuracy over epochs.
-8. **Model Evaluation on Test Set:** Evaluate model performance on the test set and display confusion matrix and classification report.
+## Required Libraries
+- TensorFlow
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
 ## Results
+- **F1 Score**: 0.9666
+- **Accuracy**: 0.9671
+- **Loss**: 1.4024
+- **Precision**: 0.9672
+- **Recall**: 0.9663
 
-- **F1 Score:** 0.9666
-- **Accuracy:** 0.9671
-- **Loss:** 1.4024
-- **Precision:** 0.9672
-- **Recall:** 0.9663
+### Classification Report
+- Black Sea Sprat: Precision: 0.96, Recall: 1.00, F1-score: 0.98
+- Gilt-Head Bream: Precision: 0.98, Recall: 0.97, F1-score: 0.97
+- Hourse Mackerel: Precision: 0.98, Recall: 1.00, F1-score: 0.99
+- Red Mullet: Precision: 0.99, Recall: 0.99, F1-score: 0.99
+- Red Sea Bream: Precision: 0.99, Recall: 0.98, F1-score: 0.98
+- Sea Bass: Precision: 0.98, Recall: 0.95, F1-score: 0.96
+- Shrimp: Precision: 0.99, Recall: 0.98, F1-score: 0.98
+- Striped Red Mullet: Precision: 0.99, Recall: 1.00, F1-score: 0.99
+- Trout: Precision: 0.95, Recall: 0.94, F1-score: 0.95
 
-### Classification Report:
+## License
+- No license information available.
 
-| Species               | Precision | Recall | F1-Score | Support |
-|-----------------------|-----------|--------|----------|---------|
-| Black Sea Sprat       | 0.96      | 1.00   | 0.98     | 211     |
-| Gilt-Head Bream       | 0.98      | 0.97   | 0.97     | 204     |
-| Hourse Mackerel       | 0.98      | 1.00   | 0.99     | 195     |
-| Red Mullet            | 0.99      | 0.99   | 0.99     | 191     |
-| Red Sea Bream         | 0.99      | 0.98   | 0.98     | 201     |
-| Sea Bass              | 0.98      | 0.95   | 0.96     | 179     |
-| Shrimp                | 0.99      | 0.98   | 0.98     | 209     |
-| Striped Red Mullet    | 0.99      | 1.00   | 0.99     | 207     |
-| Trout                 | 0.95      | 0.94   | 0.95     | 203     |
-| **Accuracy**          |           |        | **0.98** | 1800    |
-| **Macro Avg**         | 0.98      | 0.98   | 0.98     | 1800    |
-| **Weighted Avg**      | 0.98      | 0.98   | 0.98     | 1800    |
-
-## Kaggle Notebook Link
-
-You can access the notebook [here](https://www.kaggle.com/code/yalnmertdurmaz/fish-image-classification-using-artificial-neural?scriptVersionId=202722162).
-
+## Link to Kaggle Notebook
+- [Kaggle Notebook](https://www.kaggle.com/code/yalnmertdurmaz/fish-image-classification-using-artificial-neural?scriptVersionId=202722162)
